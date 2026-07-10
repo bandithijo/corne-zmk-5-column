@@ -27,86 +27,9 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp ESCAPE>;
-        };
-
-        combo_bksp {
-            timeout-ms = <50>;
-            key-positions = <10 9>;
-            bindings = <&kp BACKSPACE>;
-        };
-
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <13 14>;
-        };
-
-        combo_shift {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <25 26>;
-        };
-
-        combo_delete {
-            bindings = <&kp DELETE>;
-            key-positions = <21 22>;
-        };
-
-        combo_rshift {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <33 34>;
-        };
-
-        exclm {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <1 13>;
-        };
-
-        at {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <2 14>;
-        };
-
-        hash {
-            bindings = <&kp HASH>;
-            key-positions = <3 15>;
-        };
-
-        dllr {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-        };
-
-        percnt {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-        };
-
-        caret {
-            bindings = <&kp CARET>;
-            key-positions = <6 18>;
-        };
-
-        and {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <7 19>;
-        };
-
-        str {
-            bindings = <&kp ASTERISK>;
-            key-positions = <8 20>;
-        };
-
-        leftparen {
-            bindings = <&kp LPAR>;
-            key-positions = <9 21>;
-        };
-
-        rparen {
-            bindings = <&kp RPAR>;
-            key-positions = <10 22>;
         };
 
         layout_switch {
@@ -146,9 +69,9 @@
 
         numsym_layer {
             bindings = <
-&trans  &kp N1        &kp N2     &kp N3   &kp N4   &kp N5          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &studio_unlock  &trans
-&trans  &kp NUMBER_6  &kp N7     &kp N8   &kp N9   &kp NUMBER_0    &kp LEFT          &kp DOWN           &kp UP          &kp RIGHT        &kp ASTERISK    &trans
-&trans  &kp GRAVE     &kp TILDE  &kp DQT  &kp SQT  &kp BSLH        &kp LESS_THAN     &kp GREATER_THAN   &kp MINUS       &kp EQUAL        &kp SLASH       &trans
+&trans  &kp N1        &kp N2     &kp N3   &kp N4   &kp N5          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &none      &trans
+&trans  &kp NUMBER_6  &kp N7     &kp N8   &kp N9   &kp NUMBER_0    &kp LEFT          &kp DOWN           &kp UP          &kp RIGHT        &none      &trans
+&trans  &kp GRAVE     &kp TILDE  &kp DQT  &kp SQT  &kp BSLH        &kp LESS_THAN     &kp GREATER_THAN   &kp MINUS       &kp EQUAL        &kp SLASH  &trans
                                  &trans   &trans   &trans          &trans            &trans             &trans
             >;
         };
@@ -164,10 +87,10 @@
 
         sys_layer {
             bindings = <
-&trans  &trans        &trans        &bt BT_PRV    &bt BT_NXT    &soft_off         &none   &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans  &none   &none   &none   &none   &trans
-&trans  &bootloader   &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none   &trans  &trans  &trans  &trans  &trans
-                                    &trans        &trans        &trans            &trans  &trans  &trans
+&trans  &trans        &trans        &bt BT_PRV    &bt BT_NXT    &soft_off         &studio_unlock  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans          &none   &none   &none   &none   &trans
+&trans  &bootloader   &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none           &trans  &trans  &trans  &trans  &trans
+                                    &trans        &trans        &trans            &trans          &trans  &trans
             >;
         };
     };
